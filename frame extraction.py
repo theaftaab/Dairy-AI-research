@@ -3,6 +3,15 @@ import os
 
 
 def extract_frames(vid_path: str, frame_dir: str) -> None:
+    """
+        Extracts frames from the given video file and saves them to a directory.
+
+        Parameters:
+        vid_path (str): The path to the video file.
+        frame_dir (str): The directory where the extracted frames will be stored.
+
+        Creates the directory if it does not exist and writes frames as JPEG files.
+        """
     cam = cv2.VideoCapture(vid_path)
 
     try:

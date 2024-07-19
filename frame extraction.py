@@ -17,8 +17,9 @@ def extract_frames(vid_path: str, frame_dir: str) -> None:
     while True:
         ret, frame = cam.read()
         if ret:
-            name = './data/frame' + str(currentframe) + '.jpg'
+            name = os.path.join(frame_dir, f'frame{currentframe}.jpg')
             print('Creating...' + name)
+
             cv2.imwrite(name, frame)
             currentframe += 1
         else:

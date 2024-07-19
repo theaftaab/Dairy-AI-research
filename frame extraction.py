@@ -39,4 +39,4 @@ def extract_frames(vid_path: str, frame_dir: str) -> None:
 
 
 if __name__ == '__main__':
-    extract_frames('Cow Rumination 2.mp4', './data/extracted_frames')
+    extract_frames('Cow Rumination 2.mp4', 'data/extracted_frames')
